@@ -1,0 +1,46 @@
+{
+  "capturedAt": "2026-11-19T18:35:43.328Z",
+  "baseUrl": "http://127.0.0.1:5173/",
+  "locales": [
+    "zh-CN",
+    "en-US"
+  ],
+  "viewports": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "suffix": "1920"
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "suffix": "1366"
+    }
+  ],
+  "homeMetrics": {
+    "zh-CN-home-1920": {
+      "clientHeight": 922,
+      "scrollHeight": 944,
+      "footerBottom": 975,
+      "workspaceBottom": 978
+    },
+    "zh-CN-home-1366": {
+      "clientHeight": 610,
+      "scrollHeight": 610,
+      "footerBottom": 0,
+      "workspaceBottom": 666
+    },
+    "en-US-home-1920": {
+      "clientHeight": 922,
+      "scrollHeight": 923,
+      "footerBottom": 954,
+      "workspaceBottom": 978
+    },
+    "en-US-home-1366": {
+      "clientHeight": 610,
+      "scrollHeight": 610,
+      "footerBottom": 0,
+      "workspaceBottom": 666
+    }
+  }
+}

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/aether-mark.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#eef1f7" />
+    <meta
+      name="description"
+      content="Aether OS — 可交互的 AI 原生桌面原型。演示中的所有数据与智能体活动均为模拟。"
+    />
+    <title>Aether OS · AI 原生桌面</title>
+    <script>
+      (function () {
+        try {
+          var saved = JSON.parse(localStorage.getItem('aether-os-demo-settings-v1') || '{}');
+          var root = document.documentElement;
+          root.lang = saved.language === 'en-US' ? 'en-US' : 'zh-CN';
+          var appearance = saved.appearance || 'light';
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          root.dataset.theme =
+            appearance === 'dark' || (appearance === 'system' && prefersDark)
+              ? 'dark'
+              : 'light';
+          root.dataset.accent = saved.accent || 'blue';
+          root.dataset.wallpaper = saved.wallpaper || 'dawn';
+          if (saved.reduceMotion) root.classList.add('reduce-motion');
+        } catch (error) {
+          document.documentElement.dataset.theme = 'light';
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
